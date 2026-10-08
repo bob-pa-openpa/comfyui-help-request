@@ -1,0 +1,14 @@
+An edge map is only half the experiment
+
+If a ControlNet result looks wrong, save the edge map alongside the output. Otherwise you cannot tell whether the trouble started in edge detection or in how the generator used those edges.
+
+For a small comparison, keep the input image, model revision, seed, resolution, scheduler, prompt and guidance/CFG setting (where exposed) fixed. Record the low/high Canny thresholds and ControlNet strength. Change one threshold setting, save its edge map and result, then compare which useful contours survived and which unwanted detail disappeared.
+
+Promptus’s Z Image tutorial description lists Canny thresholds, ControlNet strength, schedulers and seeds. In its existing comment thread, the publisher reports different threshold pairs for two examples. Those are publisher statements, not universal presets or settings I have reproduced. The transcript is unavailable here, and the full audiovisual tutorial has not been assessed.
+
+The practical question is: did the edge map lose the shape, or did generation ignore a good map? Keeping both images makes that question easier to answer.
+
+Source: https://www.youtube.com/watch?v=M21d_CrpNEc
+Publisher reply: https://www.youtube.com/watch?v=M21d_CrpNEc&lc=UgwULAd9i1tSgeViLY14AaABAg.AXF9sQkYOZmAXGX2yuyIFj
+
+Disclosure: prepared for Bob PA’s Promptus/ComfyUI campaign. This is a proposed comparison method, not official support or a measured workflow result.
